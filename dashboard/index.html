@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./booststrap/css/bootstrap.min.css" >
+    <style>
+        .navbar{
+            background: #bbdefb;
+            
+        }
+        
+    
+    </style>    
+    <title>Financeiro</title>
+  </head>
+  <body>
+   <nav class="navbar navbar-light " id="barras"> 
+       <a class="navbar-brand" href="#">Sistema de Gestão</a>
+   </nav>
+    <div class="container" id="cards">
+        <div class="row" id="linha">
+            
+        </div>
+    </div>
+    <script>
+        const linha=document.getElementById('linha');
+
+        const menu=
+        [
+            {
+                img:'imagens/1.jpg',
+                texto:'Financeiro'
+            },
+            {
+                img:'imagens/2.jpg',
+                texto:'Produtos'
+            },
+            {
+                img:'imagens/3.jpg',
+                texto:'Estoque'
+            },
+            {
+                img:'imagens/4.jpg',
+                texto:'Clientes'
+            },
+            {
+                img:'imagens/5.jpg',
+                texto:'Fornecedores'
+            },
+            {
+                img:'imagens/6.jpg',
+                texto:'Logistica'
+            }
+        ]
+    
+        menu.map((f)=>{
+            let item=`
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="${f.img}" alt="Card image cap">
+                    <div class="card-body">
+                      <p class="card-text">${f.texto}</p>
+                    </div>
+                  </div>
+            </div>
+            
+            `;
+            linha.innerHTML += item;
+        })
+   
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="jquery/jquery-3.3.1.slim.min.js" ></script>
+    <script src="pooper/popper.min.js" ></script>
+    <script src="bootstrap/js/bootstrap.min.js" ></script>
+  </body>
+</html>
